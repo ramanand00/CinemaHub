@@ -1,159 +1,104 @@
-# 🎬 CinemaHub – AI Movie Recommendation Platform
+# MovieStream - AI-Powered Movie Recommendation Platform 🎬
 
-CinemaHub is a **Movie streaming and recommendation platform** powered by **Artificial Intelligence (Content-Based Filtering)**.  
-The project recommends movies based on **genres and movie overviews**, allowing users to explore similar movies seamlessly while watching trailers directly from YouTube.
+<div align="center">
 
-This project is built using **React + Vite + Tailwind CSS** for the frontend and **FastAPI + Machine Learning (TF-IDF & Cosine Similarity)** for the backend.
+![MovieStream Banner](https://via.placeholder.com/800x200/FF0000/FFFFFF?text=MovieStream+AI+Recommendation+Platform)
 
----
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?logo=python&logoColor=white)](https://python.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## 📌 Introduction
+**YouTube-style movie discovery with AI-powered recommendations**
 
-With the rapid growth of online streaming platforms, users often struggle to discover movies that match their interests.  
-**CinemaHub** solves this problem by providing an **AI-powered movie recommendation system** that suggests similar movies based on content similarity.
+[Live Demo](https://your-demo-link.com) · [Report Bug](https://github.com/yourusername/moviestream/issues) · [Request Feature](https://github.com/yourusername/moviestream/issues)
 
-The platform delivers:
-- A modern **YouTube-like UI**
-- Real-time **movie recommendations**
-- Integrated **YouTube trailer playback**
-- Fast and scalable backend using **FastAPI**
+</div>
 
----
+## 📖 Introduction
+
+MovieStream is a modern, YouTube-style movie recommendation platform that combines content-based filtering with an intuitive user interface. The application provides personalized movie suggestions using AI/ML algorithms, offering users an immersive experience similar to popular streaming platforms. Discover your next favorite movie through intelligent recommendations based on your viewing preferences!
 
 ## 🎯 Objectives
 
-The main objectives of this project are:
+- **🤖 Intelligent Recommendations**: Develop an advanced movie recommendation system using content-based filtering and TF-IDF vectorization
+- **🎨 YouTube-Inspired UI**: Create a responsive, familiar interface that mimics YouTube's sleek design for seamless user experience
+- **🔍 Real-Time Search**: Implement efficient search functionality with instant results and filtering
+- **⚡ High Performance**: Build a scalable FastAPI backend with optimized response times
+- **📱 Cross-Platform**: Ensure flawless experience across desktop, tablet, and mobile devices
+- **🎬 Integrated Video Playback**: Provide smooth YouTube video integration with autoplay capabilities
 
-- ✅ To build an **AI-based movie recommendation system**
-- ✅ To provide a **modern, responsive streaming UI**
-- ✅ To implement **content-based filtering** using Machine Learning
-- ✅ To allow users to **search and explore movies easily**
-- ✅ To integrate **YouTube trailers** for an immersive experience
-- ✅ To demonstrate full-stack development skills (Frontend + Backend + ML)
+## 📋 Scope
 
----
+### **Frontend Features**
+- 🎥 YouTube-style video player with embedded trailers
+- 📺 Responsive movie grid with hover effects
+- 🔄 Real-time recommendation updates
+- 🎯 "Now Playing" indicator for active movies
+- 📱 Mobile-responsive navigation
+- 🎨 Dark theme with YouTube-inspired color scheme
 
-## 🔍 Scope of the Project
+### **Backend Capabilities**
+- 🧠 Content-based recommendation engine
+- 📊 TF-IDF vectorization with cosine similarity
+- 🚀 FastAPI RESTful API endpoints
+- 🔍 Efficient search algorithms
+- 📈 Scalable architecture for large datasets
 
-The scope of CinemaHub includes:
+### **ML Model**
+- **Algorithm**: Content-based filtering
+- **Feature Extraction**: TF-IDF Vectorizer (5000 features)
+- **Similarity Metric**: Cosine Similarity
+- **Data Processing**: Genre + Overview combination
 
-- 📽️ Displaying a list of movies with posters and details
-- 🤖 Recommending similar movies using AI algorithms
-- 🔎 Searching movies by title
-- ▶️ Playing movie trailers using YouTube embed
-- 📊 Handling movie data from CSV (scalable to database later)
-- 🌐 Frontend-backend communication via REST API
+## 🛠️ Tools and Technologies
 
-**Future Enhancements (Scope Expansion):**
-- User authentication & watch history
-- Collaborative filtering
-- Personalized recommendations
-- Database integration (MongoDB / PostgreSQL)
-- Deployment on cloud platforms
+### **Frontend Stack**
+| Technology | Purpose | Version |
+|------------|---------|---------|
+| **React** | UI Library | 18.x |
+| **Vite** | Build Tool & Dev Server | 5.x |
+| **Tailwind CSS** | Styling Framework | 3.4.x |
+| **React Icons** | Icon Library | 4.x |
+| **Axios** | HTTP Client | 1.x |
 
----
+### **Backend Stack**
+| Technology | Purpose | Version |
+|------------|---------|---------|
+| **FastAPI** | Web Framework | 0.104.x |
+| **scikit-learn** | ML Library | 1.3.x |
+| **pandas** | Data Manipulation | 2.1.x |
+| **uvicorn** | ASGI Server | 0.24.x |
+| **pydantic** | Data Validation | 2.5.x |
 
-## 🛠️ Tools & Technologies Used
+### **Development Tools**
+| Tool | Purpose |
+|------|---------|
+| **Git** | Version Control |
+| **npm** | Package Manager |
+| **Postman/Insomnia** | API Testing |
+| **VS Code** | Code Editor |
 
-### 🔹 Frontend
-- React.js
-- Vite
-- Tailwind CSS
-- Axios
-- React Icons
+## 💡 Applications
 
-### 🔹 Backend
-- FastAPI
-- Python
-- Uvicorn
-- CORS Middleware
+1. **🎬 Personal Entertainment Hub** - Personalized movie discovery platform for home entertainment
+2. **🔍 Content Discovery Engine** - Intelligent system for finding similar movies based on preferences
+3. **📚 Educational Tool** - Learn about recommendation algorithms and ML implementation
+4. **💼 Portfolio Project** - Showcase full-stack development and ML integration skills
+5. **🎓 Research Platform** - Study movie relationships, genres, and recommendation patterns
 
-### 🔹 Machine Learning
-- Pandas
-- NumPy
-- Scikit-learn
-- TF-IDF Vectorizer
-- Cosine Similarity
+## 🚀 Installation Guide
 
-### 🔹 Data
-- CSV Dataset (movies.csv)
+### Prerequisites
+- Node.js (v16 or higher)
+- Python (v3.9 or higher)
+- npm or yarn
+- Git
 
-### 🔹 Development Tools
-- VS Code
-- Git & GitHub
-- Postman (API testing)
+### Backend Setup
 
----
-
-## 🚀 Applications
-
-CinemaHub can be used in:
-
-- 🎥 Online movie recommendation platforms
-- 🎓 Educational projects (AI / ML / Full Stack)
-- 🧪 Machine learning demonstrations
-- 💼 Portfolio projects for software engineers
-- 📊 Research on recommendation systems
-
----
-
-## 🧠 How Recommendation Works
-
-The recommendation engine uses **Content-Based Filtering**:
-
-1. Combines movie **genres + overview**
-2. Converts text into vectors using **TF-IDF**
-3. Calculates similarity using **Cosine Similarity**
-4. Recommends the most similar movies to the selected one
-
----
-
-## 📡 API Endpoints
-
-| Method | Endpoint | Description |
-|------|--------|------------|
-| GET | `/movies` | Fetch all movies |
-| GET | `/movies/{title}` | Get movie by title |
-| GET | `/recommend/{title}` | Get AI recommendations |
-| GET | `/search/{query}` | Search movies |
-| GET | `/health` | API health check |
-
----
-
-## 🧑‍💻 Project Author
-
-**Ramanand Mandal**  
-🎓 BSc. CSIT Student  
-💡 Aspiring Software Engineer  
-
----
-
-## 📬 Contact & Social Media
-
-You can reach out to me through the following platforms:
-
-- 🔗 **LinkedIn:**  
-  https://www.linkedin.com/in/ramanand-mandal-24a124324/
-
-- 📘 **Facebook:**  
-  https://www.facebook.com/ramanand.mandal.np
-
-- 📸 **Instagram:**  
-  https://www.instagram.com/maybe_razu/
-
-- 📧 **Email:**  
-  contact@ramanandmandal.com.np
-
-- 📱 **WhatsApp:**  
-  +977-9829704557
-
----
-
-## 📜 License
-
-This project is created for **educational and learning purposes**.  
-Feel free to fork, modify, and enhance it.
-
----
-
-⭐ If you like this project, don’t forget to **star the repository**!
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/moviestream.git
+cd moviestream
