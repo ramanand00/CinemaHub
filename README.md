@@ -102,3 +102,204 @@ MovieStream is a modern, YouTube-style movie recommendation platform that combin
 ```bash
 git clone https://github.com/yourusername/moviestream.git
 cd moviestream
+
+Set up backend environment
+
+bash
+cd backend
+python -m venv venv
+
+# On Windows
+venv\Scripts\activate
+
+# On macOS/Linux
+source venv/bin/activate
+Install Python dependencies
+
+bash
+pip install -r requirements.txt
+Configure environment
+Create a .env file in backend directory:
+
+env
+HOST=0.0.0.0
+PORT=8000
+DEBUG=true
+DATA_PATH=data/movies.csv
+Place your data file
+Ensure movies.csv is in backend/data/ directory
+
+Start backend server
+
+bash
+uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
+Frontend Setup
+Navigate to frontend directory
+
+bash
+cd ../frontend
+Install dependencies
+
+bash
+npm install
+Start development server
+
+bash
+npm run dev
+Access the application
+
+Frontend: http://localhost:5173
+
+Backend API: http://localhost:8000
+
+API Docs: http://localhost:8000/docs
+
+Quick Start with Docker
+bash
+# Build and run with Docker Compose
+docker-compose up --build
+
+# Or build individually
+docker build -t moviestream-backend ./backend
+docker build -t moviestream-frontend ./frontend
+📁 Project Structure
+text
+moviestream/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── MovieCard.jsx      # Individual movie card component
+│   │   │   ├── MovieRow.jsx       # Horizontal movie scrolling row
+│   │   │   ├── Navbar.jsx         # Navigation bar with search
+│   │   │   └── VideoPlayer.jsx    # YouTube video player
+│   │   ├── pages/
+│   │   │   └── Home.jsx          # Main application page
+│   │   ├── services/
+│   │   │   └── api.js            # API service layer
+│   │   └── styles/
+│   │       └── index.css         # Global styles
+│   ├── index.html                # HTML template
+│   ├── package.json              # Dependencies
+│   └── vite.config.js            # Build configuration
+│
+├── backend/
+│   ├── src/
+│   │   ├── models/
+│   │   │   └── models.py         # Pydantic schemas
+│   │   ├── database/
+│   │   │   └── database.py       # Data access layer
+│   │   └── recommender/
+│   │       └── recommender.py    # ML recommendation engine
+│   ├── data/
+│   │   └── movies.csv            # Movie dataset
+│   ├── requirements.txt          # Python dependencies
+│   ├── main.py                  # FastAPI application
+│   └── .env.example             # Environment template
+│
+└── README.md                    # Documentation
+🌐 API Endpoints
+Method	Endpoint	Description
+GET	/	API root with documentation
+GET	/movies	Get all movies
+GET	/movies/{title}	Get specific movie by title
+GET	/recommend/{title}	Get recommendations (top_n optional)
+GET	/search/{query}	Search movies by title
+GET	/health	Health check endpoint
+Example Usage
+bash
+# Get all movies
+curl http://localhost:8000/movies
+
+# Get recommendations for "Inception"
+curl "http://localhost:8000/recommend/Inception?top_n=5"
+
+# Search for movies
+curl http://localhost:8000/search/dark
+🧪 Testing
+Backend Tests
+bash
+cd backend
+python -m pytest tests/
+API Testing with curl
+bash
+# Health check
+curl http://localhost:8000/health
+
+# Get movie details
+curl http://localhost:8000/movies/The%20Dark%20Knight
+🤝 Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+Fork the Project
+
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+Push to the Branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+Development Guidelines
+Follow existing code style and conventions
+
+Add comments for complex logic
+
+Update documentation as needed
+
+Write tests for new features
+
+Ensure all tests pass before submitting PR
+
+📞 Contact & Connect
+<div align="center">
+Ramanand Mandal
+Connect with me on social media:
+
+https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white
+https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white
+https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white
+https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white
+
+Email: contact@ramanandmandal.com.np
+WhatsApp: +977 9829704557
+Location: Nepal
+
+</div>
+📄 License
+Distributed under the MIT License. See LICENSE file for more information.
+
+🙏 Acknowledgments
+Movie Data: The Movie Database (TMDB) for movie information
+
+Video Hosting: YouTube for trailer hosting
+
+Icons: React Icons library
+
+UI Inspiration: YouTube's interface design
+
+Open Source Community: All amazing libraries and tools used
+
+🚧 Roadmap
+Add user authentication
+
+Implement collaborative filtering
+
+Add watch history and favorites
+
+Deploy to cloud platform
+
+Add rating system
+
+Implement watchlists
+
+Add multiple language support
+
+<div align="center">
+Made with ❤️ by Ramanand Mandal
+"Good movies tell stories, great movies create experiences."
+
+⭐ Star this repo if you found it helpful!
+
+</div> ```
