@@ -96,10 +96,71 @@ MovieStream is a modern, YouTube-style movie recommendation platform that combin
 - npm or yarn
 - Git
 
+### Installation Setup
+
+
 ### Backend Setup
 
 1. **Clone the repository**
 ```bash
 git clone https://github.com/yourusername/moviestream.git
 cd moviestream
+cd server
+```
 
+2. Virtual Environment Activation Setup:
+**Windows**
+```bash
+venv\Scripts\activate
+```
+**Mac / Linux**
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+3. Run the Application:
+```bash
+uvicorn src.main:app --reload
+```
+
+---
+
+### Frontend Setup
+
+1. **Go to the frontend directory**
+```bash
+cd ../frontend
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the frontend development server:
+```bash
+npm run dev -- --host
+```
+
+---
+4. Open the browser and navigate to `http://localhost:5173` to view the application.
+
+---
+## If You are getting the problems Contact: 
+
+[![Facebook](https://img.shields.io/badge/Facebook-blue?logo=facebook)](https://www.facebook.com/ramanand.mandal.np)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/maybe_razu)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ramanand-mandal-24a124324)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://wa.me/9829704557)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:mrazzanand@gmail.com)
