@@ -106,6 +106,8 @@ cd CinemaHub
 ---
 
 ### Backend Setup
+
+**Go to Backend Directory**
 ```bash
 cd server
 ```
