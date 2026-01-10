@@ -88,16 +88,13 @@ MovieStream is a modern, YouTube-style movie recommendation platform that combin
 4. **💼 Portfolio Project** - Showcase full-stack development and ML integration skills
 5. **🎓 Research Platform** - Study movie relationships, genres, and recommendation patterns
 
-## 🚀 Installation Guide
-
 ### Prerequisites
 - Node.js (v16 or higher)
 - Python (v3.9 or higher)
 - npm or yarn
 - Git
 
-### Installation Setup
-
+## 🚀 Installation Guide
 
 
 **Clone the repository**
