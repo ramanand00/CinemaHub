@@ -99,11 +99,17 @@ MovieStream is a modern, YouTube-style movie recommendation platform that combin
 ### Installation Setup
 
 
-### Backend Setup
 
 **Clone the repository**
 ```bash
 git clone https://github.com/ramanand00/CinemaHub.git
+cd CinemaHub
+```
+
+---
+
+### Backend Setup
+```bash
 cd server
 ```
 
