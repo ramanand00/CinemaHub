@@ -1,8 +1,8 @@
-# MovieStream - AI-Powered Movie Recommendation Platform 🎬
+# CinemaHub - AI-Powered Movie Recommendation Platform 🎬
 
 <div align="center">
 
-![MovieStream Banner](https://via.placeholder.com/800x200/FF0000/FFFFFF?text=MovieStream+AI+Recommendation+Platform)
+![CinemaHub Banner](https://drive.google.com/file/d/17ldViCC4uTmNp-p69HiUp9x96yGjEtqR/view?usp=sharing)
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -12,13 +12,13 @@
 
 **YouTube-style movie discovery with AI-powered recommendations**
 
-[Live Demo](https://your-demo-link.com) · [Report Bug](https://github.com/yourusername/moviestream/issues) · [Request Feature](https://github.com/yourusername/moviestream/issues)
+[Live Demo](https://your-demo-link.com) · [Report Bug](https://github.com/yourusername/CinemaHub/issues) · [Request Feature](https://github.com/yourusername/CinemaHub/issues)
 
 </div>
 
 ## 📖 Introduction
 
-MovieStream is a modern, YouTube-style movie recommendation platform that combines content-based filtering with an intuitive user interface. The application provides personalized movie suggestions using AI/ML algorithms, offering users an immersive experience similar to popular streaming platforms. Discover your next favorite movie through intelligent recommendations based on your viewing preferences!
+CinemaHub is a modern, YouTube-style movie recommendation platform that combines content-based filtering with an intuitive user interface. The application provides personalized movie suggestions using AI/ML algorithms, offering users an immersive experience similar to popular streaming platforms. Discover your next favorite movie through intelligent recommendations based on your viewing preferences!
 
 ## 🎯 Objectives
 
