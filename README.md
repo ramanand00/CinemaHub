@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![CinemaHub Banner](https://drive.google.com/file/d/17ldViCC4uTmNp-p69HiUp9x96yGjEtqR/view?usp=sharing)
+![CinemaHub Banner](https://github.com/ramanand00/CinemaHub/blob/main/client/src/assets/CinemaHub.png)
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
