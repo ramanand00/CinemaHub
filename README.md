@@ -101,19 +101,23 @@ MovieStream is a modern, YouTube-style movie recommendation platform that combin
 
 ### Backend Setup
 
-1. **Clone the repository**
+**Clone the repository**
 ```bash
-git clone https://github.com/yourusername/moviestream.git
-cd moviestream
+git clone https://github.com/ramanand00/CinemaHub.git
 cd server
 ```
 
-2. Virtual Environment Activation Setup:
-**Windows**
+---
+
+
+### Virtual Environment Activation Setup:
+
+**For Windows**
+
 ```bash
 venv\Scripts\activate
 ```
-**Mac / Linux**
+**For Mac / Linux**
 
 ```bash
 source venv/bin/activate
@@ -121,7 +125,7 @@ source venv/bin/activate
 
 ---
 
-Install dependencies:
+**Install dependencies:**
 
 ```bash
 pip install -r requirements.txt
@@ -129,7 +133,8 @@ pip install -r requirements.txt
 
 ---
 
-3. Run the Application:
+### Run the Application 
+
 ```bash
 uvicorn src.main:app --reload
 ```
@@ -140,7 +145,7 @@ uvicorn src.main:app --reload
 
 1. **Go to the frontend directory**
 ```bash
-cd ../frontend
+cd ../client
 ```
 
 2. Install dependencies:
