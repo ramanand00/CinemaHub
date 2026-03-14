@@ -1,66 +1,61 @@
-import React, { useState } from 'react';
-import { FaSearch, FaFilm, FaBars } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { Link, useNavigate } from 'react-router-dom';
+import { Search, Film, Home, Sparkles } from 'lucide-react';
+import { useState } from 'react';
 
-const Navbar = ({ onSearch, onMenuClick }) => {
+const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      onSearch(searchQuery);
-      setSearchQuery('');
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery(''); // Clear input after search
     }
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-youtube-dark border-b border-youtube-gray px-4 py-3">
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
-        {/* Left Section: Logo and Menu */}
-        <div className="flex items-center space-x-4">
-          <button
-            onClick={onMenuClick}
-            className="p-2 rounded-full hover:bg-youtube-gray transition-colors"
-            aria-label="Toggle menu"
+    <motion.nav 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: 'spring', stiffness: 100 }}
+      className="glass-morphism fixed w-full z-50 px-6 py-4"
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 group">
+          <motion.div
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.5 }}
           >
-            <FaBars className="text-xl" />
-          </button>
-          
-          <div className="flex items-center space-x-2">
-            <FaFilm className="text-youtube-red text-2xl" />
-            <span className="text-xl font-bold">CinemaHub</span>
-          </div>
-        </div>
+            <Film className="w-8 h-8 text-purple-400" />
+          </motion.div>
+          <span className="text-2xl font-bold">
+            <span className="text-gradient">Cinema</span>
+            <span className="text-white">Hub</span>
+          </span>
+          <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
+        </Link>
 
-        {/* Center Section: Search Bar */}
-        <div className="flex-1 max-w-2xl mx-4">
+        <div className="flex items-center gap-8">
+          <Link to="/" className="flex items-center gap-1 hover:text-purple-400 transition">
+            <Home className="w-4 h-4" />
+            <span className="hidden sm:inline">Home</span>
+          </Link>
+          
           <form onSubmit={handleSearch} className="relative">
-            <div className="relative">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search movies..."
-                className="w-full bg-youtube-gray text-white px-4 py-2 pl-10 rounded-full focus:outline-none focus:ring-2 focus:ring-youtube-red focus:border-transparent"
-              />
-              <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            </div>
-            <button
-              type="submit"
-              className="absolute right-0 top-0 h-full px-6 bg-youtube-lightGray rounded-r-full hover:bg-gray-600 transition-colors"
-            >
-              Search
-            </button>
+            <input
+              type="text"
+              placeholder="Search movies..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="bg-white/10 border border-white/20 rounded-full px-4 py-2 pl-10 pr-4 focus:outline-none focus:border-purple-400 w-48 sm:w-64 text-sm"
+            />
+            <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
           </form>
         </div>
-
-        {/* Right Section: User Profile */}
-        <div className="flex items-center space-x-4">
-          <div className="w-8 h-8 bg-youtube-red rounded-full flex items-center justify-center">
-            <span className="font-semibold">U</span>
-          </div>
-        </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

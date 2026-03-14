@@ -1,49 +1,46 @@
-import React from 'react';
-import { FaPlay } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { Play, Star, Clock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const MovieCard = ({ movie, onClick, isCurrent = false }) => {
+const MovieCard = ({ movie, index }) => {
+  const navigate = useNavigate();
+
   return (
-    <div 
-      className={`
-        relative group cursor-pointer transition-all duration-300 
-        ${isCurrent ? 'ring-2 ring-youtube-red' : 'hover:scale-105'}
-      `}
-      onClick={() => onClick(movie)}
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      whileHover={{ y: -10 }}
+      className="glass-morphism rounded-xl overflow-hidden cursor-pointer group"
+      onClick={() => navigate(`/movie/${encodeURIComponent(movie.title)}`)}
     >
-      {/* Poster Image */}
-      <div className="relative overflow-hidden rounded-lg bg-youtube-gray">
-        <img
-          src={movie.poster_url}
+      <div className="relative h-48 overflow-hidden">
+        <img 
+          src={movie.poster_url || 'https://via.placeholder.com/300x450?text=No+Poster'} 
           alt={movie.title}
-          className="w-full h-48 object-cover group-hover:opacity-75 transition-opacity"
-          onError={(e) => {
-            e.target.src = `https://via.placeholder.com/300x450/272727/ffffff?text=${encodeURIComponent(movie.title)}`;
-          }}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
-        
-        {/* Play Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-          <div className="w-12 h-12 bg-youtube-red rounded-full flex items-center justify-center">
-            <FaPlay className="text-white ml-1" />
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-4">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            className="bg-purple-500 rounded-full p-3"
+          >
+            <Play className="w-6 h-6 fill-white" />
+          </motion.div>
         </div>
-
-        {/* Current Playing Indicator */}
-        {isCurrent && (
-          <div className="absolute top-2 right-2 bg-youtube-red px-2 py-1 rounded text-xs font-semibold">
-            NOW PLAYING
-          </div>
-        )}
       </div>
-
-      {/* Movie Info */}
-      <div className="mt-2">
-        <h3 className="font-semibold text-sm truncate">{movie.title}</h3>
-        <p className="text-youtube-textSecondary text-xs truncate">
-          {movie.genres.split(',').slice(0, 2).join(', ')}
-        </p>
+      
+      <div className="p-4">
+        <h3 className="font-bold text-lg mb-1 line-clamp-1">{movie.title}</h3>
+        <p className="text-sm text-gray-300 mb-2">{movie.genres}</p>
+        <div className="flex items-center gap-2 text-sm text-gray-400">
+          <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+          <span>4.5</span>
+          <Clock className="w-4 h-4 ml-2" />
+          <span>2h 30m</span>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
